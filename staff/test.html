@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sound Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #00796b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Notification Sound</h1>
+    <button onclick="playNotificationSound()">Play Sound</button>
+    <audio id="notification-sound" src="../sounds/ill-make-it-possible-notification.mp3" preload="auto"></audio>
+    
+    <script>
+        function playNotificationSound() {
+            var audio = document.getElementById('notification-sound');
+            audio.play().catch(error => console.error('Error playing audio:', error));
+        }
+    </script>
+</body>
+</html>
